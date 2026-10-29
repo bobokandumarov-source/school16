@@ -2,6 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function backendApiPlugin() {
   const DATA_DIR = path.resolve(__dirname, 'data');
@@ -104,8 +108,11 @@ function backendApiPlugin() {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), backendApiPlugin()],
+export default defineConfig(({ command }) => ({
+  plugins: [
+    react(),
+    command === 'serve' ? backendApiPlugin() : null
+  ].filter(Boolean) as any,
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -121,4 +128,4 @@ export default defineConfig({
     host: true,
     allowedHosts: true,
   },
-});
+}));
