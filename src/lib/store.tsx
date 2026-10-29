@@ -173,20 +173,100 @@ export const SchoolDataProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     return localStorage.getItem(STORAGE_KEY_PREFIX + 'admin_email') || null;
   });
 
-  // Helper to sync changes to disk backend (data/school-data.json) and local cache
+  // Helper to sync changes to Supabase cloud database & disk backend & local cache
   const syncKeyToServer = (key: string, value: any) => {
     saveStored(key, value);
+
+    // 1. If Supabase is connected, persist directly to cloud PostgreSQL database
+    if (isSupabaseConfigured && supabase) {
+      supabase
+        .from('school_data_store')
+        .upsert({
+          key,
+          data: value,
+          updated_at: new Date().toISOString(),
+        })
+        .then(({ error }) => {
+          if (error) console.warn(`[Store] Supabase save error for ${key}:`, error);
+          else console.log(`[Store] Synced ${key} to Supabase cloud database successfully.`);
+        })
+        .catch((err) => console.warn(`[Store] Supabase sync error for ${key}:`, err));
+    }
+
+    // 2. Also notify local dev server if running
     fetch('/api/save', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ key, value }),
-    }).catch((err) => {
-      console.warn(`[Store] Failed to sync ${key} to server database`, err);
-    });
+    }).catch(() => {});
   };
 
-  // Synchronize state from central server database (data/school-data.json) on load & focus
+  // Synchronize state from Supabase cloud database / central server database on load & focus
   const loadServerData = async () => {
+    // 1. Try Supabase cloud database first (for Vercel & 24/7 global sync)
+    if (isSupabaseConfigured && supabase) {
+      try {
+        const { data, error } = await supabase.from('school_data_store').select('*');
+        if (!error && Array.isArray(data) && data.length > 0) {
+          data.forEach((row: { key: string; data: any }) => {
+            if (row.key === 'settings' && row.data) {
+              setSettings(row.data);
+              saveStored('settings', row.data);
+            }
+            if (row.key === 'subjects' && Array.isArray(row.data)) {
+              setSubjects(row.data);
+              saveStored('subjects', row.data);
+            }
+            if (row.key === 'assessmentComponents' && Array.isArray(row.data)) {
+              setAssessmentComponents(row.data);
+              saveStored('assessmentComponents', row.data);
+            }
+            if (row.key === 'gradingScale' && Array.isArray(row.data)) {
+              setGradingScale(row.data);
+              saveStored('gradingScale', row.data);
+            }
+            if (row.key === 'academicQuarters' && Array.isArray(row.data)) {
+              setAcademicQuarters(row.data);
+              saveStored('academicQuarters', row.data);
+            }
+            if (row.key === 'leadership' && Array.isArray(row.data)) {
+              setLeadership(row.data);
+              saveStored('leadership', row.data);
+            }
+            if (row.key === 'alumni' && Array.isArray(row.data)) {
+              setAlumni(row.data);
+              saveStored('alumni', row.data);
+            }
+            if (row.key === 'students' && Array.isArray(row.data)) {
+              setStudents(row.data);
+              saveStored('students', row.data);
+            }
+            if (row.key === 'teachers' && Array.isArray(row.data)) {
+              setTeachers(row.data);
+              saveStored('teachers', row.data);
+            }
+            if (row.key === 'activities' && Array.isArray(row.data)) {
+              setActivities(row.data);
+              saveStored('activities', row.data);
+            }
+            if (row.key === 'news' && Array.isArray(row.data)) {
+              setNews(row.data);
+              saveStored('news', row.data);
+            }
+            if (row.key === 'mediaAssets' && Array.isArray(row.data)) {
+              setMediaAssets(row.data);
+              saveStored('mediaAssets', row.data);
+            }
+          });
+          console.log('[Store] Cloud Supabase database synchronized successfully.');
+          return;
+        }
+      } catch (err) {
+        console.warn('[Store] Supabase query error, trying /api/data fallback:', err);
+      }
+    }
+
+    // 2. Fallback to local server /api/data
     try {
       const res = await fetch('/api/data');
       if (res.ok) {
@@ -560,26 +640,43 @@ export const SchoolDataProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     setTeachers(initialOutstandingTeachers);
     setActivities(initialExtracurricularActivities);
     setNews(initialNews);
+    setMediaAssets([]);
     localStorage.clear();
     saveStored('auth', isAuthenticated ? 'true' : 'false');
+
+    const defaultState = {
+      settings: initialSchoolSettings,
+      subjects: initialSubjects,
+      assessmentComponents: initialAssessmentComponents,
+      gradingScale: initialGradingScale,
+      academicQuarters: initialAcademicQuarters,
+      leadership: initialLeadership,
+      alumni: initialAlumni,
+      students: initialStudentAchievements,
+      teachers: initialOutstandingTeachers,
+      activities: initialExtracurricularActivities,
+      news: initialNews,
+      mediaAssets: [],
+    };
+
+    if (isSupabaseConfigured && supabase) {
+      const rows = Object.entries(defaultState).map(([k, v]) => ({
+        key: k,
+        data: v,
+        updated_at: new Date().toISOString(),
+      }));
+      supabase
+        .from('school_data_store')
+        .upsert(rows)
+        .then(() => console.log('[Store] Reset all data in Supabase successfully.'))
+        .catch((err) => console.warn('[Store] Supabase reset error', err));
+    }
 
     fetch('/api/save', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        allData: {
-          settings: initialSchoolSettings,
-          subjects: initialSubjects,
-          assessmentComponents: initialAssessmentComponents,
-          gradingScale: initialGradingScale,
-          academicQuarters: initialAcademicQuarters,
-          leadership: initialLeadership,
-          alumni: initialAlumni,
-          students: initialStudentAchievements,
-          teachers: initialOutstandingTeachers,
-          activities: initialExtracurricularActivities,
-          news: initialNews,
-        },
+        allData: defaultState,
       }),
     }).catch((err) => console.warn('[Store] Reset sync failed', err));
   };
