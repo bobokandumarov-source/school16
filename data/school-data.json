@@ -1,0 +1,717 @@
+{
+  "settings": {
+    "id": "school_16_main",
+    "name": "Navoi City Specialized State Secondary School №16",
+    "uzName": "Navoiy shahar 16-sonli ixtisoslashtirilgan davlat umumta'lim maktabi",
+    "address": "15-A, Nurafshon Street, Navoi City, Uzbekistan",
+    "postalCode": "210100",
+    "phone": "+998 79 223 32 61",
+    "counselorEmail": "counselorschool16@gmail.com",
+    "establishedYear": 1966,
+    "totalStudents": 2448,
+    "totalTeachers": 215,
+    "gradesRange": "Grades 1–11",
+    "schoolWeek": "Six days per week",
+    "instructionalFramework": "Uzbekistan National Curriculum",
+    "institutionType": "State secondary school with specialized subject instruction",
+    "heroHeadline": "Educating Minds. Building Character. Inspiring Futures.",
+    "heroSupportingText": "Welcome to Navoi City Specialized State Secondary School №16, where academic learning, personal development, and community engagement come together to prepare students for the future.",
+    "heroButtonPrimary": "Explore Our School",
+    "heroButtonSecondary": "Discover Our Academics",
+    "heroImageUrl": "",
+    "aboutIntroduction": "Established in 1966, Navoi City Specialized State Secondary School №16 has been part of the educational community of Navoi, Uzbekistan, for six decades.\n\nToday, our school serves 2,448 students across Grades 1–11, supported by 215 teachers. Following Uzbekistan's national curriculum, we provide a comprehensive education with specialized instruction in Mathematics, Physics, English, Chemistry, Biology, and Information Technology.\n\nWe believe education goes beyond textbooks, examinations, and academic achievement. Our mission is to nurture not only knowledgeable students, but also responsible, respectful, confident, and active young people who can collaborate, think independently, and contribute positively to their communities.\n\nThrough academic learning, extracurricular activities, creativity, sports, and student-led initiatives, we encourage every student to discover their strengths, develop leadership skills, and prepare for opportunities beyond the classroom.",
+    "mission": "To educate knowledgeable, responsible, and socially active individuals who are prepared to learn, lead, collaborate, and make a positive difference.",
+    "coreValues": [
+      "Academic Excellence",
+      "Integrity and Respect",
+      "Collaboration",
+      "Leadership",
+      "Creativity",
+      "Community Responsibility"
+    ],
+    "socialLinks": {
+      "telegram": "",
+      "facebook": "",
+      "instagram": "",
+      "youtube": ""
+    },
+    "officialPdfUrl": "",
+    "lastUpdated": "2026-10-28"
+  },
+  "subjects": [
+    {
+      "id": "sub_1",
+      "name": "Mathematics",
+      "category": "Exact Sciences",
+      "applicableGrades": "Grades 1–11",
+      "isSpecialized": true,
+      "description": "Foundational and advanced mathematical inquiry, logic, proof, and problem solving across primary and secondary curricula.",
+      "displayOrder": 1,
+      "isPublished": true
+    },
+    {
+      "id": "sub_2",
+      "name": "Algebra",
+      "category": "Exact Sciences",
+      "applicableGrades": "Grades 7–11",
+      "isSpecialized": true,
+      "description": "Rigorous study of algebraic equations, functions, coordinate geometry, polynomial operations, and analytical problem-solving.",
+      "displayOrder": 2,
+      "isPublished": true
+    },
+    {
+      "id": "sub_3",
+      "name": "Geometry",
+      "category": "Exact Sciences",
+      "applicableGrades": "Grades 7–11",
+      "isSpecialized": true,
+      "description": "Euclidean and coordinate geometry, spatial visualization, theorem proofs, trigonometry, and solid stereometry.",
+      "displayOrder": 3,
+      "isPublished": true
+    },
+    {
+      "id": "sub_4",
+      "name": "Physics",
+      "category": "Exact Sciences",
+      "applicableGrades": "Grades 6–11",
+      "isSpecialized": true,
+      "description": "Classical mechanics, thermodynamics, electromagnetism, optics, and introduction to modern quantum physics with experimental laboratories.",
+      "displayOrder": 4,
+      "isPublished": true
+    },
+    {
+      "id": "sub_5",
+      "name": "Informatics and Information Technology",
+      "category": "Exact Sciences",
+      "applicableGrades": "Grades 5–11",
+      "isSpecialized": true,
+      "description": "Algorithmic thinking, programming foundations, data structures, digital literacy, web basics, and computational problem solving.",
+      "displayOrder": 5,
+      "isPublished": true
+    },
+    {
+      "id": "sub_6",
+      "name": "Chemistry",
+      "category": "Natural Sciences",
+      "applicableGrades": "Grades 7–11",
+      "isSpecialized": true,
+      "description": "Inorganic and organic chemical principles, stoichiometry, atomic models, reaction kinetics, and laboratory experimentation.",
+      "displayOrder": 6,
+      "isPublished": true
+    },
+    {
+      "id": "sub_7",
+      "name": "Biology",
+      "category": "Natural Sciences",
+      "applicableGrades": "Grades 5–11",
+      "isSpecialized": true,
+      "description": "Cell biology, genetics, human anatomy, botany, zoology, ecology, and biological systems understanding.",
+      "displayOrder": 7,
+      "isPublished": true
+    },
+    {
+      "id": "sub_8",
+      "name": "Geography",
+      "category": "Natural Sciences",
+      "applicableGrades": "Grades 5–10",
+      "isSpecialized": false,
+      "description": "Physical and socio-economic geography of Uzbekistan and world regions, cartography, climate patterns, and environmental stewardship.",
+      "displayOrder": 8,
+      "isPublished": true
+    },
+    {
+      "id": "sub_9",
+      "name": "English Language",
+      "category": "Languages & Literature",
+      "applicableGrades": "Grades 1–11",
+      "isSpecialized": true,
+      "description": "Intensive communication, grammar competence, academic reading, listening comprehension, and formal writing preparing students for global opportunities.",
+      "displayOrder": 9,
+      "isPublished": true
+    },
+    {
+      "id": "sub_10",
+      "name": "Uzbek Language",
+      "category": "Languages & Literature",
+      "applicableGrades": "Grades 1–11",
+      "isSpecialized": false,
+      "description": "State language mastery, grammar, phonetics, composition, rhetoric, and active linguistic expression.",
+      "displayOrder": 10,
+      "isPublished": true
+    },
+    {
+      "id": "sub_11",
+      "name": "Literature",
+      "category": "Languages & Literature",
+      "applicableGrades": "Grades 1–11",
+      "isSpecialized": false,
+      "description": "Exploration of classical Uzbek and world literary masterpieces, critical analysis, poetry, and essay composition.",
+      "displayOrder": 11,
+      "isPublished": true
+    },
+    {
+      "id": "sub_12",
+      "name": "Russian Language",
+      "category": "Languages & Literature",
+      "applicableGrades": "Grades 2–11",
+      "isSpecialized": false,
+      "description": "Interpersonal communication, linguistic syntax, literary reading, and multilingual fluency development.",
+      "displayOrder": 12,
+      "isPublished": true
+    },
+    {
+      "id": "sub_13",
+      "name": "History of Uzbekistan",
+      "category": "Social Sciences",
+      "applicableGrades": "Grades 5–11",
+      "isSpecialized": false,
+      "description": "Comprehensive historical journey from ancient civilizations of Central Asia through the Timurid Renaissance to modern independent Uzbekistan.",
+      "displayOrder": 13,
+      "isPublished": true
+    },
+    {
+      "id": "sub_14",
+      "name": "World History",
+      "category": "Social Sciences",
+      "applicableGrades": "Grades 6–11",
+      "isSpecialized": false,
+      "description": "Comparative study of global civilizations, historic revolutions, political philosophy, and modern international relations.",
+      "displayOrder": 14,
+      "isPublished": true
+    },
+    {
+      "id": "sub_15",
+      "name": "Basics of Government and Law",
+      "category": "Social Sciences",
+      "applicableGrades": "Grades 8–11",
+      "isSpecialized": false,
+      "description": "Constitutional framework of Uzbekistan, civil rights, legal responsibilities, jurisprudence, and democratic civic participation.",
+      "displayOrder": 15,
+      "isPublished": true
+    },
+    {
+      "id": "sub_16",
+      "name": "Basics of Economics",
+      "category": "Social Sciences",
+      "applicableGrades": "Grades 8–11",
+      "isSpecialized": false,
+      "description": "Introductory microeconomics, market principles, entrepreneurship, personal finance management, and national macroeconomic systems.",
+      "displayOrder": 16,
+      "isPublished": true
+    },
+    {
+      "id": "sub_17",
+      "name": "Moral Education",
+      "category": "Social Sciences",
+      "applicableGrades": "Grades 1–11",
+      "isSpecialized": false,
+      "description": "Character formation, civic ethics, respect for family and cultural heritage, and positive interpersonal relationship building.",
+      "displayOrder": 17,
+      "isPublished": true
+    },
+    {
+      "id": "sub_18",
+      "name": "Technology",
+      "category": "Arts, Technology & Physical Education",
+      "applicableGrades": "Grades 1–9",
+      "isSpecialized": false,
+      "description": "Practical engineering foundations, technical design, craftsmanship, manual dexterity, and culinary/vocational skills.",
+      "displayOrder": 18,
+      "isPublished": true
+    },
+    {
+      "id": "sub_19",
+      "name": "Drawing",
+      "category": "Arts, Technology & Physical Education",
+      "applicableGrades": "Grades 1–8",
+      "isSpecialized": false,
+      "description": "Technical drafting, architectural projections, fine arts, perspective drawing, and visual creative expression.",
+      "displayOrder": 19,
+      "isPublished": true
+    },
+    {
+      "id": "sub_20",
+      "name": "Physical Education",
+      "category": "Arts, Technology & Physical Education",
+      "applicableGrades": "Grades 1–11",
+      "isSpecialized": false,
+      "description": "Physical fitness, athletic team sports, gymnastics, agility, endurance, and lifelong health habits.",
+      "displayOrder": 20,
+      "isPublished": true
+    },
+    {
+      "id": "sub_21",
+      "name": "Pre-Military Training",
+      "category": "Arts, Technology & Physical Education",
+      "applicableGrades": "Grades 10–11",
+      "isSpecialized": false,
+      "description": "Civil defense preparedness, emergency first aid, physical readiness, leadership under pressure, and national service fundamentals.",
+      "displayOrder": 21,
+      "isPublished": true
+    }
+  ],
+  "assessmentComponents": [
+    {
+      "id": "comp_1",
+      "code": "Daily Assessment",
+      "name": "Daily Classroom Assessment",
+      "description": "Daily classroom performance, active participation, homework completion, oral responses, and continuous formative tasks contribute up to 10 points toward the quarterly total.",
+      "maxPoints": 10,
+      "displayOrder": 1
+    },
+    {
+      "id": "comp_2",
+      "code": "BSB",
+      "name": "Unit-Based Summative Assessment (BSB)",
+      "description": "BSB refers to unit-based summative assessment conducted periodically after relevant textbook units or curricular learning sections have been completed. The combined BSB contribution across units is up to 50 points per quarter.",
+      "maxPoints": 50,
+      "displayOrder": 2
+    },
+    {
+      "id": "comp_3",
+      "code": "CHSB",
+      "name": "Quarterly Summative Assessment (CHSB)",
+      "description": "CHSB refers to quarterly summative assessment conducted comprehensively once per quarter, evaluating cumulative subject mastery. It contributes up to 40 points toward the quarterly total.",
+      "maxPoints": 40,
+      "displayOrder": 3
+    }
+  ],
+  "gradingScale": [
+    {
+      "id": "scale_1",
+      "scoreRange": "85–100",
+      "scoreMin": 85,
+      "scoreMax": 100,
+      "uzbekGrade": "5",
+      "description": "Excellent",
+      "usReference": "A / 4.0",
+      "notes": "Demonstrates comprehensive understanding, exceptional analytical depth, and superior mastery of curricular objectives.",
+      "displayOrder": 1
+    },
+    {
+      "id": "scale_2",
+      "scoreRange": "75–84",
+      "scoreMin": 75,
+      "scoreMax": 84,
+      "uzbekGrade": "4",
+      "description": "Good",
+      "usReference": "B / 3.0",
+      "notes": "Demonstrates solid mastery of subject principles, consistent reasoning, and well-developed analytical execution with minor errors.",
+      "displayOrder": 2
+    },
+    {
+      "id": "scale_3",
+      "scoreRange": "60–74",
+      "scoreMin": 60,
+      "scoreMax": 74,
+      "uzbekGrade": "3",
+      "description": "Satisfactory",
+      "usReference": "C / 2.0",
+      "notes": "Meets basic national curricular standards and functional comprehension, requiring occasional guidance on complex concepts.",
+      "displayOrder": 3
+    },
+    {
+      "id": "scale_4",
+      "scoreRange": "45–59",
+      "scoreMin": 45,
+      "scoreMax": 59,
+      "uzbekGrade": "2",
+      "description": "Unsatisfactory",
+      "usReference": "D–F / 0–1.0",
+      "notes": "Falls below expected achievement thresholds; fundamental concepts require targeted review and remedial support.",
+      "displayOrder": 4
+    },
+    {
+      "id": "scale_5",
+      "scoreRange": "Below 45",
+      "scoreMin": 0,
+      "scoreMax": 44,
+      "uzbekGrade": "Further preparation required",
+      "description": "Reassessment or additional study",
+      "usReference": "F / Incomplete",
+      "notes": "Below 45 points, students are assigned structured additional preparation and reassessment according to school procedures.",
+      "displayOrder": 5
+    }
+  ],
+  "academicQuarters": [
+    {
+      "id": "q_1",
+      "quarterName": "Quarter 1",
+      "months": "September–October",
+      "displayOrder": 1,
+      "exactDates": "Early September to late October"
+    },
+    {
+      "id": "q_2",
+      "quarterName": "Quarter 2",
+      "months": "November–December",
+      "displayOrder": 2,
+      "exactDates": "Early November to late December"
+    },
+    {
+      "id": "q_3",
+      "quarterName": "Quarter 3",
+      "months": "January–March",
+      "displayOrder": 3,
+      "exactDates": "Mid January to late March"
+    },
+    {
+      "id": "q_4",
+      "quarterName": "Quarter 4",
+      "months": "April–May",
+      "displayOrder": 4,
+      "exactDates": "Early April to late May"
+    }
+  ],
+  "leadership": [
+    {
+      "id": "lead_1",
+      "name": "Tagaeva Nozima Babamuratovna",
+      "position": "Principal",
+      "roleType": "principal",
+      "photoUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      "displayOrder": 1,
+      "isPublished": true
+    },
+    {
+      "id": "lead_2",
+      "name": "Davronova Shoxida Shodmonovna",
+      "position": "Deputy Principal",
+      "roleType": "deputy",
+      "photoUrl": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80",
+      "displayOrder": 2,
+      "isPublished": true
+    },
+    {
+      "id": "lead_3",
+      "name": "Djurayev Baxodir Narzullayevich",
+      "position": "Deputy Principal",
+      "roleType": "deputy",
+      "photoUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+      "displayOrder": 3,
+      "isPublished": true
+    },
+    {
+      "id": "lead_4",
+      "name": "Gapparova Muqaddas Ochilovna",
+      "position": "Deputy Principal",
+      "roleType": "deputy",
+      "photoUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+      "displayOrder": 4,
+      "isPublished": true
+    },
+    {
+      "id": "lead_5",
+      "name": "Yadgorova Umida Arslonboyevna",
+      "position": "Deputy Principal",
+      "roleType": "deputy",
+      "photoUrl": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=800&q=80",
+      "displayOrder": 5,
+      "isPublished": true
+    }
+  ],
+  "alumni": [
+    {
+      "id": "alumni_1",
+      "name": "Nigina Muzaffarova",
+      "graduationYear": 2022,
+      "university": "University of Minnesota Twin Cities",
+      "description": "Graduate of Class of 2022, pursuing higher education at the University of Minnesota Twin Cities in the United States.",
+      "photoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+      "isFeatured": true,
+      "displayOrder": 1,
+      "isPublished": true
+    }
+  ],
+  "students": [
+    {
+      "id": "ach_1",
+      "name": "Mahmudov Sarvar",
+      "achievementTitle": "Participant in the Republican Mathematics Olympiad",
+      "achievementDescription": "First-place winner at the Navoi regional stage and participant representing the region in the prestigious Republican Mathematics Olympiad.",
+      "category": "Mathematics",
+      "photoUrl": "/uploads/img_1793198613238_efxw4t.jpg",
+      "isFeatured": true,
+      "displayOrder": 1,
+      "isPublished": true,
+      "grade": "",
+      "year": ""
+    },
+    {
+      "id": "ach_2",
+      "name": "Ikromov Javohir",
+      "achievementTitle": "Early University Admission & International Certificates",
+      "achievementDescription": "Earned early university admission and distinguished recipient of international certificates demonstrating academic aptitude.",
+      "category": "Academic Honors",
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+      "isFeatured": true,
+      "displayOrder": 2,
+      "isPublished": true
+    }
+  ],
+  "teachers": [
+    {
+      "id": "teacher_1",
+      "name": "Razzoqova Dildora",
+      "achievement": "Winner of the national \"Best Teacher\" competition.",
+      "qualifications": "National Pedagogy Recognition",
+      "photoUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+      "isFeatured": true,
+      "displayOrder": 1,
+      "isPublished": true
+    },
+    {
+      "id": "teacher_2",
+      "name": "Qahhorov Ilhom",
+      "achievement": "Holder of international GMAT and SAT certificates.",
+      "qualifications": "International Standardized Examination Credentials",
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+      "isFeatured": true,
+      "displayOrder": 2,
+      "isPublished": true
+    }
+  ],
+  "activities": [
+    {
+      "id": "club_1",
+      "name": "Debate Club",
+      "category": "Clubs & Societies",
+      "description": "Fostering critical argumentation, structured public speaking, parliamentary debate techniques, and research into global civic issues.",
+      "fullDescription": "The School №16 Debate Club is dedicated to developing persuasive public speaking, critical reasoning, and evidence-based argumentation among students. Members participate in parliamentary debate formats, research contemporary global challenges, practice formal cross-examinations, and represent our institution in municipal and regional speech competitions.\n\nThrough structured weekly debate rounds, students build confidence in articulating complex ideas, active listening, and thinking on their feet in both Uzbek and English languages.",
+      "meetingTime": "Tuesdays & Thursdays, 15:00 – 16:30",
+      "location": "Assembly Hall / Room 204",
+      "coordinator": "Debate Society Advisor",
+      "objectives": [
+        "Mastery of Karl Popper and World Schools Parliamentary debate formats",
+        "Enhanced academic English and public speaking fluency",
+        "Fact-based analytical research and critical literature review",
+        "Leadership and collaborative teamwork under competitive conditions"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 1,
+      "isPublished": true
+    },
+    {
+      "id": "club_2",
+      "name": "School Eco Committee",
+      "category": "Clubs & Societies",
+      "description": "Promoting environmental sustainability, campus waste reduction, regional ecology education, and student-led green initiatives in Navoi.",
+      "fullDescription": "The School Eco Committee unites socially active students committed to environmental stewardship and sustainable community practices in Navoi City. The committee coordinates campus recycling campaigns, tree-planting projects, energy conservation audits, and ecological awareness workshops for younger grades.\n\nMembers engage in field observations of the regional arid ecosystem and design student-led solutions to promote responsible water consumption and green urban environments.",
+      "meetingTime": "Wednesdays, 14:30 – 16:00",
+      "location": "Biology Laboratory (Room 112)",
+      "coordinator": "Faculty of Natural Sciences",
+      "objectives": [
+        "Campus-wide plastic waste collection and battery recycling initiatives",
+        "Navoi urban greening and seasonal school garden landscaping",
+        "Student seminars on climate resilience and sustainable energy",
+        "Field ecology projects and environmental impact assessments"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 2,
+      "isPublished": true
+    },
+    {
+      "id": "club_3",
+      "name": "Sewing and Handicrafts Club",
+      "category": "Arts & Culture",
+      "description": "Cultivating traditional needlework, garment design, textile craftsmanship, and creative manual arts.",
+      "fullDescription": "The Sewing and Handicrafts Club celebrates traditional Uzbek textile heritage while teaching practical garment construction, embroidery (suzani patterns), pattern drafting, and modern craft design. Students gain hands-on dexterity with sewing equipment, fabric manipulation, and decorative needlecraft.\n\nThe club regularly showcases student creations at annual school exhibitions, cultural festivals, and national holiday celebrations.",
+      "meetingTime": "Mondays & Fridays, 15:00 – 16:30",
+      "location": "Technology Workshop (Room 105)",
+      "coordinator": "Technology & Applied Arts Faculty",
+      "objectives": [
+        "Mastery of sewing machines, cutting tools, and textile finishing techniques",
+        "Preservation of traditional Uzbek gold-thread and suzani embroidery",
+        "Creation of bespoke garments, theatrical costumes, and home decor items",
+        "Development of precision manual craft and entrepreneurial design skills"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 3,
+      "isPublished": true
+    },
+    {
+      "id": "club_4",
+      "name": "Virtual Chemistry Club",
+      "category": "Science & Tech",
+      "description": "Engaging students in digital molecular simulations, interactive chemical modeling, safety protocols, and laboratory research investigations.",
+      "fullDescription": "Bridging specialized chemistry instruction with modern computational tools, the Virtual Chemistry Club allows students to explore atomic structures, reaction mechanisms, and thermodynamic kinetics through 3D interactive molecular software and virtual laboratory simulators.\n\nStudents model complex organic synthesis pathways, simulate hazardous reactions safely in virtual environments, and prepare for national chemistry Olympiad practical sections.",
+      "meetingTime": "Thursdays, 15:00 – 16:30",
+      "location": "IT Lab 2 & Specialized Chemistry Lab",
+      "coordinator": "Specialized Chemistry Department",
+      "objectives": [
+        "3D computational modeling of molecular geometry and covalent bonding",
+        "Virtual reaction kinetics and stoichiometry simulation experiments",
+        "Olympiad chemistry problem sets and advanced laboratory preparation",
+        "Safe investigation of industrial chemical processes relevant to Navoi region"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 4,
+      "isPublished": true
+    },
+    {
+      "id": "club_5",
+      "name": "Instrumental Ensemble",
+      "category": "Arts & Culture",
+      "description": "Developing musical talent through traditional Uzbek and classical Western instruments, ensemble teamwork, and school performances.",
+      "fullDescription": "The School №16 Instrumental Ensemble brings together young instrumentalists across Grades 1–11 playing traditional Uzbek national instruments (dutar, doira, rubab, nay) alongside classical Western piano and strings. Students rehearse musical arrangements, develop rhythmic precision, and perform at official school ceremonies, concerts, and regional arts competitions.",
+      "meetingTime": "Tuesdays & Saturdays, 14:00 – 15:30",
+      "location": "Music & Arts Studio",
+      "coordinator": "Musical Arts Faculty",
+      "objectives": [
+        "Mastery of instrument technique, ear training, and score reading",
+        "Ensemble harmony and synchronized musical performance",
+        "Preservation of classical Shashmaqom and folk musical heritage",
+        "Stage presence, poise, and public recital experience"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 5,
+      "isPublished": true
+    },
+    {
+      "id": "club_6",
+      "name": "Art Club",
+      "category": "Arts & Culture",
+      "description": "Exploring sketching, watercolor, acrylic painting, sculpture, and visual arts exhibitions celebrating student creativity.",
+      "fullDescription": "The Art Club provides an open studio environment where students explore drawing, oil and acrylic painting, watercolor washes, architectural drafting, and sculptural modeling. Under faculty mentorship, students learn color theory, linear perspective, composition, and art history, mounting regular school exhibitions celebrating creative student expression.",
+      "meetingTime": "Wednesdays & Fridays, 15:00 – 16:30",
+      "location": "Visual Arts Atelier (Room 308)",
+      "coordinator": "Fine Arts Faculty",
+      "objectives": [
+        "Foundational classical drawing, anatomical proportions, and perspective",
+        "Exploration of diverse mediums: watercolor, gouache, pastels, and clay",
+        "Curation of seasonal campus art galleries and student exhibitions",
+        "Preparation of visual art portfolios for university admissions"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1460661419200-fd4358377982?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 6,
+      "isPublished": true
+    },
+    {
+      "id": "club_7",
+      "name": "Turon Theatre Club",
+      "category": "Arts & Culture",
+      "description": "Dramatic arts and theatrical performance honoring Uzbekistan's rich Turon cultural heritage, staging plays and developing stage presence.",
+      "fullDescription": "Inspired by the historic legacy of the early 20th-century Turon theatrical movement, this drama society stages dramatic plays, classical Uzbek literature adaptations, and historical performances. Students participate in scriptwriting, acting, voice projection, costume design, and stage management, bringing literature to life on stage.",
+      "meetingTime": "Mondays & Thursdays, 15:30 – 17:00",
+      "location": "School Main Auditorium",
+      "coordinator": "Literature & Dramatic Arts Faculty",
+      "objectives": [
+        "Development of vocal modulation, physical expression, and stage presence",
+        "Theatrical dramatization of classical Uzbek and world literary masterpieces",
+        "Collaborative production management: lighting, sound, costumes, and direction",
+        "Cultural appreciation of Turon and Jadid educational heritage"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 7,
+      "isPublished": true
+    },
+    {
+      "id": "club_8",
+      "name": "Dance and Ballet Club",
+      "category": "Arts & Culture",
+      "description": "Choreographic training spanning classical ballet technique, modern contemporary dance, and expressive traditional Uzbek dance forms.",
+      "fullDescription": "The Dance and Ballet Club offers rigorous choreographic instruction, emphasizing physical flexibility, poise, rhythm, and artistic expression. Students practice classical barre work, national Uzbek folk dances (Fergana, Bukhara, and Khorezm styles), and modern lyrical choreography, performing at school celebrations and regional dance festivals.",
+      "meetingTime": "Tuesdays & Thursdays, 16:00 – 17:30",
+      "location": "Choreography Dance Studio",
+      "coordinator": "Choreography Faculty",
+      "objectives": [
+        "Classical ballet posture, footwork discipline, and flexibility training",
+        "Authentic regional Uzbek national folk dance choreography",
+        "Coordination, spatial awareness, and musical rhythm synchronization",
+        "Annual stage recitals and festival competition appearances"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 8,
+      "isPublished": true
+    },
+    {
+      "id": "club_9",
+      "name": "Sports Clubs",
+      "category": "Sports",
+      "description": "Competitive and recreational athletic development offering structured training in Chess, Football, Volleyball, Tennis, and National Wrestling.",
+      "fullDescription": "Our sports program fosters physical fitness, strategic discipline, and sportsmanship across five core athletic disciplines: Chess, Football, Volleyball, Table Tennis, and National Wrestling (Kurash). Students train under qualified physical education coaches, competing in intra-school tournaments and municipal championships.",
+      "meetingTime": "Daily Sessions (Monday–Saturday), 15:00 – 17:00",
+      "location": "Main Gymnasium & Outdoor Sports Grounds",
+      "coordinator": "Physical Education Department",
+      "objectives": [
+        "Chess: Strategic calculation, opening theory, and tactical problem-solving",
+        "Football & Volleyball: Team coordination, cardiovascular stamina, and ball control",
+        "Table Tennis: Agility, fast reflexes, and competitive tournament play",
+        "National Wrestling (Kurash): Physical strength, balance, discipline, and respect"
+      ],
+      "photoUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80"
+      ],
+      "displayOrder": 9,
+      "isPublished": true
+    }
+  ],
+  "news": [
+    {
+      "id": "news_1",
+      "slug": "welcome-to-navoi-school-16-official-digital-portal",
+      "title": "Navoi City Specialized State Secondary School №16 Launches Official Digital Portal",
+      "shortDescription": "The school administration is proud to present its official institutional website, providing transparent academic insights and downloadable school profiles for families and international university admissions.",
+      "content": "Navoi City Specialized State Secondary School №16 has officially launched its institutional digital platform. Designed to meet the standards of premier international educational institutions, the website offers comprehensive resources for students, families, educators, and global admissions officers.\n\nVisitors can explore our six decades of institutional history, our rigorous implementation of Uzbekistan's national curriculum, our 100-point assessment breakdown, and our dedicated school profile.\n\nWe invite our community to discover our academic programs, extracurricular societies, and the achievements of our exceptional students and faculty.",
+      "coverImage": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+      "category": "School News",
+      "publicationDate": "2026-09-02",
+      "isPublished": true,
+      "displayOrder": 1
+    },
+    {
+      "id": "news_2",
+      "slug": "mathematics-and-science-olympiad-preparations",
+      "title": "School Preparations Underway for Republican Academic Olympiads",
+      "shortDescription": "Specialized faculty lead intensive problem-solving workshops in Mathematics, Physics, and Chemistry ahead of regional and national stages.",
+      "content": "Our specialized academic faculty have initiated after-school problem-solving seminars in Mathematics, Physics, Chemistry, and Information Technology. Building on the achievements of students such as Sarvar Mahmudov at the regional level, teachers are guiding participants through advanced analytical topics and multi-step Olympiad problems.\n\nWe commend our students' dedication and intellectual discipline as they represent School №16 with pride.",
+      "coverImage": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+      "category": "Academic Achievements",
+      "publicationDate": "2026-10-14",
+      "isPublished": true,
+      "displayOrder": 2
+    },
+    {
+      "id": "news_3",
+      "slug": "school-profile-published-for-international-admissions",
+      "title": "Official School Profile Released for International University Admissions Officers",
+      "shortDescription": "A comprehensive institutional document detailing the school curriculum, assessment structure, grading conversions, and student demographics is now available for download.",
+      "content": "To support graduating students applying to international higher education institutions, Navoi City Specialized State Secondary School №16 has compiled an official School Profile.\n\nThis document offers overseas university admissions offices, scholarship organizations, and credential evaluation services a thorough explanation of Uzbekistan's secondary school structure, the quarterly 100-point BSB/CHSB evaluation methodology, and comparative grade references.\n\nThe document can be viewed on our dedicated School Profile page or downloaded as an official PDF.",
+      "coverImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+      "category": "Announcements",
+      "publicationDate": "2026-10-20",
+      "isPublished": true,
+      "displayOrder": 3
+    }
+  ],
+  "mediaAssets": []
+}
