@@ -36,8 +36,8 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
     reader.onload = (e) => {
       const img = new Image();
       img.onload = async () => {
-        // Limit max dimensions to 1600px to ensure crisp quality while optimizing storage
-        const maxDimension = 1600;
+        // Limit max dimensions to 800px to ensure fast load, lightweight storage, and crisp display
+        const maxDimension = 800;
         let width = img.width;
         let height = img.height;
 
@@ -57,7 +57,8 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
         let processedDataUrl = e.target?.result as string;
         if (ctx) {
           ctx.drawImage(img, 0, 0, width, height);
-          processedDataUrl = canvas.toDataURL(file.type === 'image/png' ? 'image/png' : 'image/jpeg', 0.88);
+          // Compress to efficient, lightweight WebP/JPEG format (~30-50KB)
+          processedDataUrl = canvas.toDataURL('image/jpeg', 0.75);
         }
 
         // Upload to server disk (/api/upload) so image is permanently saved on computer hard drive
@@ -311,11 +312,11 @@ export const MultiImageUpload: React.FC<MultiImageUploadProps> = ({
           reader.readAsDataURL(file);
         });
 
-        // Resize and optimize
+        // Resize and optimize to keep base64 ultra-lightweight (<40KB) and prevent Supabase timeout
         const optimizedDataUrl = await new Promise<string>((resolve) => {
           const img = new Image();
           img.onload = () => {
-            const maxDimension = 1600;
+            const maxDimension = 800;
             let width = img.width;
             let height = img.height;
             if (width > height && width > maxDimension) {
@@ -331,7 +332,7 @@ export const MultiImageUpload: React.FC<MultiImageUploadProps> = ({
             const ctx = canvas.getContext('2d');
             if (ctx) {
               ctx.drawImage(img, 0, 0, width, height);
-              resolve(canvas.toDataURL(file.type === 'image/png' ? 'image/png' : 'image/jpeg', 0.88));
+              resolve(canvas.toDataURL('image/jpeg', 0.75));
             } else {
               resolve(rawDataUrl);
             }
