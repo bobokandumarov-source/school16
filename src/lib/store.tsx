@@ -339,45 +339,48 @@ export const SchoolDataProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
   // Auth methods
   const login = async (email: string, pass: string): Promise<{ success: boolean; error?: string }> => {
-    // If Supabase is configured, authenticate through Supabase Auth
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanPass = pass.trim();
+
+    // 1. Master institutional administrator credentials (instant access anytime)
+    // Supports official logins:
+    // - admin@school16.uz / school16navoi!
+    // - admin / admin16 (yoki school16navoi!)
+    // - sitoramavlonova@school16.uz / school16navoi!
+    if (
+      (cleanEmail === 'admin@school16.uz' && cleanPass === 'school16navoi!') ||
+      (cleanEmail === 'admin' && (cleanPass === 'admin16' || cleanPass === 'school16navoi!')) ||
+      (cleanEmail === 'sitoramavlonova@school16.uz' && cleanPass === 'school16navoi!')
+    ) {
+      setIsAuthenticated(true);
+      setAdminEmail(cleanEmail);
+      localStorage.setItem(STORAGE_KEY_PREFIX + 'auth', 'true');
+      localStorage.setItem(STORAGE_KEY_PREFIX + 'admin_email', cleanEmail);
+      return { success: true };
+    }
+
+    // 2. If Supabase is configured, also try Supabase Auth
     if (isSupabaseConfigured && supabase) {
       try {
         const { data, error } = await supabase.auth.signInWithPassword({
-          email,
-          password: pass,
+          email: cleanEmail,
+          password: cleanPass,
         });
-        if (error) {
-          return { success: false, error: error.message };
-        }
-        if (data.user) {
+        if (!error && data.user) {
           setIsAuthenticated(true);
-          setAdminEmail(data.user.email || email);
+          setAdminEmail(data.user.email || cleanEmail);
           localStorage.setItem(STORAGE_KEY_PREFIX + 'auth', 'true');
-          localStorage.setItem(STORAGE_KEY_PREFIX + 'admin_email', data.user.email || email);
+          localStorage.setItem(STORAGE_KEY_PREFIX + 'admin_email', data.user.email || cleanEmail);
           return { success: true };
         }
       } catch (err: any) {
-        return { success: false, error: err.message || 'Supabase authentication failed' };
+        console.warn('[Auth] Supabase auth check error', err);
       }
-    }
-
-    // Default institutional local administrator credential verification
-    // Authorized default initial login: admin@school16.uz / school16navoi!
-    // Allows administrator immediate dashboard access without remote cloud dependencies
-    if (
-      (email === 'admin@school16.uz' && pass === 'school16navoi!') ||
-      (email === 'admin' && pass === 'admin16')
-    ) {
-      setIsAuthenticated(true);
-      setAdminEmail(email);
-      localStorage.setItem(STORAGE_KEY_PREFIX + 'auth', 'true');
-      localStorage.setItem(STORAGE_KEY_PREFIX + 'admin_email', email);
-      return { success: true };
     }
 
     return {
       success: false,
-      error: 'Invalid administrator credentials. Please check your email and password.',
+      error: 'Noto\'g\'ri administrator login yoki paroli. Iltimos, qaytadan tekshirib kiriting.',
     };
   };
 
